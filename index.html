@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+    <nav class="nav-links">
+      <a href="#"><i class="fas fa-home"></i>HOME</a>
+      <a href="#"><i class="fas fa-search"></i>SEARCH</a>
+      <a href="#"><i class="fas fa-user"></i>SIGN UP</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Avengers: Endgame</h2>
+    <span class="arrow-left">&#8592;</span>
+    <img id="hero-img" src="images/avengers endgame.jpeg" alt="Avengers Endgame" />
+    <span class="arrow-right">&#8594;</span>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+
+      <h3>Marvel Studios</h3>
+      <div class="movie-list-wrapper">
+        <span class="arrow-left" onclick="slideMovies(-1)">&#8592;</span>
+        <div class="movie-list">
+          <div class="movie" onclick="loadMovieAPIs('Doctor Strange')">
+            <img src="images/doctor strange.jpg" alt="Doctor Strange">
+            <div class="movie-title">Doctor Strange</div>
+          </div>
+          <div class="movie" onclick="loadMovieAPIs('Spiderman: No Way Home')">
+            <img src="images/spiderman.jpg" alt="Spiderman">
+            <div class="movie-title">Spiderman: No Way Home</div>
+          </div>
+          <div class="movie" onclick="loadMovieAPIs('Ant-Man')">
+            <img src="images/antman.jpg" alt="Ant-Man">
+            <div class="movie-title">Ant-Man</div>
+          </div>
+          <div class="movie" onclick="loadMovieAPIs('Black Panther')">
+            <img src="images/black panther.jpg" alt="Black Panther">
+            <div class="movie-title">Black Panther</div>
+          </div>
+          <div class="movie" onclick="loadMovieAPIs('Thor: Ragnarok')">
+            <img src="images/thor ragnarok1.webp" alt="Thor Ragnarok">
+            <div class="movie-title">Thor Ragnarok</div>
+          </div>
+          <div class="movie" onclick="loadMovieAPIs('Guardians of the Galaxy')">
+            <img src="images/gog.jpg" alt="Guardian of the Galaxy">
+            <div class="movie-title">Guardian of the Galaxy</div>
+          </div>
+          <div class="movie" onclick="loadMovieAPIs('Captain Marvel')">
+            <img src="images/captain marvel1.jpg" alt="Captain Marvel">
+            <div class="movie-title">Captain Marvel</div>
+          </div>
+          <div class="movie" onclick="loadMovieAPIs('Rush Hour')">
+            <img src="images/rush hour.png" alt="Rush Hour">
+            <div class="movie-title">Rush Hour</div>
+          </div>
+          <div class="movie" onclick="loadMovieAPIs('Minecraft: The Movie')">
+            <img src="images/minecraft.jpg" alt="Minecraft">
+            <div class="movie-title">Minecraft: The Movie</div>
+          </div>
+          <div class="movie" onclick="loadMovieAPIs('Two and a Half Men')">
+            <img src="images/two and a half men.jpg" alt="Two and a Half Men">
+            <div class="movie-title">Two and a Half Men</div>
+          </div>
+          <div class="movie" onclick="loadMovieAPIs('Happy Gilmore')">
+            <img src="images/happy gilmore.jpg" alt="Happy Gilmore">
+            <div class="movie-title">Happy Gilmore</div>
+          </div>
+        </div>
+        <span class="arrow-right" onclick="slideMovies(1)">&#8594;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- API Results Display Section -->
+  <section class="api-results">
+    <div class="section-inner">
+      <h3>Movie Info & Media</h3>
+
+      <div id="movie-details">
+        <h4 id="movie-title">Select a Movie</h4>
+        <p id="movie-description"></p>
+        <img id="movie-poster" src="" alt="Movie Poster" style="max-width:200px; display:none;" />
+      </div>
+
+      <iframe
+        id="yt-player"
+        width="560"
+        height="315"
+        style="margin-top:20px; border:none; display:none;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+
+      <img
+        id="gif-container"
+        alt="Related GIF"
+        style="margin-top:20px; max-width:300px; display:none;"
+      />
+
+      <iframe
+        id="spotify-player"
+        width="300"
+        height="80"
+        style="margin-top:20px; border:none; display:none;"
+        allow="encrypted-media"
+      ></iframe>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
